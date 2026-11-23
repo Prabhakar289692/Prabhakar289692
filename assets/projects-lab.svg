@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1c14"/>
+      <stop offset="100%" stop-color="#040E0A"/>
+    </radialGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d2318"/>
+      <stop offset="100%" stop-color="#07140e"/>
+    </linearGradient>
+    <pattern id="mesh" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M 12 0 L 0 0 0 12" fill="none" stroke="#00E676" stroke-width=".4" stroke-opacity=".12"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes spin-r { from{transform:rotate(360deg)} to{transform:rotate(0deg)} }
+    @keyframes scan {
+      0%{transform:translateY(0);opacity:0}
+      10%{opacity:.7}
+      90%{opacity:.7}
+      100%{transform:translateY(140px);opacity:0}
+    }
+    @keyframes pulse {
+      0%,100%{opacity:.6} 50%{opacity:1;filter:drop-shadow(0 0 5px #00E676)}
+    }
+    .sp{animation:spin 20s linear infinite;transform-box:fill-box;transform-origin:center}
+    .sr{animation:spin-r 15s linear infinite;transform-box:fill-box;transform-origin:center}
+    .sc{animation:scan 3.5s ease-in-out infinite}
+    .sc2{animation:scan 3.5s ease-in-out infinite 1.2s}
+    .sc3{animation:scan 3.5s ease-in-out infinite 2.4s}
+    .pu{animation:pulse 2.5s ease-in-out infinite}
+  </style>
+
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <rect x="10" y="10" width="940" height="400" rx="10" fill="none" stroke="#00E676" stroke-width=".8" stroke-opacity=".2"/>
+  <path d="M10 42 L10 10 L42 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M950 42 L950 10 L918 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M10 378 L10 410 L42 410" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+  <path d="M950 378 L950 410 L918 410" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+
+  <text x="480" y="45" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+        font-size="11" font-weight="600" fill="#7A9E8A" letter-spacing="4">PROJECTS</text>
+  <line x1="380" y1="55" x2="580" y2="55" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+
+  <!-- === CARD 1 === (x:30) -->
+  <g transform="translate(30, 68)">
+    <rect width="284" height="296" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+    <rect x="12" y="12" width="260" height="148" rx="5" fill="#040e09" stroke="#00E676" stroke-width=".8" stroke-opacity=".2"/>
+    <rect x="12" y="12" width="260" height="148" fill="url(#mesh)"/>
+    <line x1="12" y1="12" x2="272" y2="12" stroke="#00E676" stroke-width="1.5" stroke-opacity=".8" class="sc"/>
+
+    <g transform="translate(142, 86)">
+      <circle cx="0" cy="0" r="52" fill="none" stroke="#FFB300" stroke-width=".8" stroke-opacity=".2" stroke-dasharray="4 10" class="sp"/>
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#00E676" stroke-width=".8" stroke-opacity=".3" stroke-dasharray="2 6" class="sr"/>
+      <polygon points="0,-24 20,-12 20,12 0,24 -20,12 -20,-12"
+               fill="none" stroke="#00E676" stroke-width="1.4" filter="url(#glow)"/>
+      <line x1="0" y1="-24" x2="0" y2="24" stroke="#FFB300" stroke-width=".6" stroke-opacity=".4"/>
+      <line x1="-20" y1="-12" x2="20" y2="12" stroke="#FFB300" stroke-width=".6" stroke-opacity=".4"/>
+      <line x1="20" y1="-12" x2="-20" y2="12" stroke="#FFB300" stroke-width=".6" stroke-opacity=".4"/>
+      <circle cx="0" cy="0" r="4" fill="#00E676" class="pu" filter="url(#glow)"/>
+      <circle cx="0" cy="-24" r="2" fill="#00E676"/>
+      <circle cx="20" cy="-12" r="2" fill="#FFB300"/>
+      <circle cx="20" cy="12" r="2" fill="#FF6B35"/>
+      <circle cx="0" cy="24" r="2" fill="#FFB300"/>
+      <circle cx="-20" cy="12" r="2" fill="#FF6B35"/>
+      <circle cx="-20" cy="-12" r="2" fill="#00E676"/>
+    </g>
+
+    <rect x="12" y="172" width="92" height="16" rx="3" fill="#00E676" fill-opacity=".12" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+    <text x="58" y="183" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="8.5" fill="#00E676">● INCUBATING</text>
+
+    <text x="142" y="210" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Neural Model Matrix</text>
+    <text x="142" y="228" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#7A9E8A">PyTorch · Deep Learning</text>
+
+    <rect x="22" y="244" width="52" height="16" rx="3" fill="#00E676" fill-opacity=".15"/>
+    <text x="48" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#00E676">Python</text>
+    <rect x="80" y="244" width="58" height="16" rx="3" fill="#FFB300" fill-opacity=".15"/>
+    <text x="109" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FFB300">PyTorch</text>
+    <rect x="144" y="244" width="52" height="16" rx="3" fill="#FF6B35" fill-opacity=".15"/>
+    <text x="170" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FF6B35">Tensors</text>
+  </g>
+
+  <!-- === CARD 2 === (x:338) -->
+  <g transform="translate(338, 68)">
+    <rect width="284" height="296" rx="8" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".3"/>
+    <rect x="12" y="12" width="260" height="148" rx="5" fill="#040e09" stroke="#FFB300" stroke-width=".8" stroke-opacity=".2"/>
+    <rect x="12" y="12" width="260" height="148" fill="url(#mesh)"/>
+    <line x1="12" y1="12" x2="272" y2="12" stroke="#FFB300" stroke-width="1.5" stroke-opacity=".8" class="sc2"/>
+
+    <g transform="translate(142, 86)">
+      <circle cx="0" cy="0" r="52" fill="none" stroke="#FFB300" stroke-width=".8" stroke-opacity=".2" stroke-dasharray="4 10" class="sr"/>
+      <polygon points="0,-30 26,-16 26,12 0,-2" fill="none" stroke="#FFB300" stroke-width="1.4"/>
+      <polygon points="0,-30 -26,-16 -26,12 0,-2" fill="none" stroke="#FF6B35" stroke-width="1.4"/>
+      <polygon points="0,-2 26,12 0,26 -26,12" fill="none" stroke="#00E676" stroke-width="1.4" filter="url(#glow)"/>
+      <circle cx="0" cy="-30" r="2.5" fill="#00E676"/>
+      <circle cx="26" cy="-16" r="2.5" fill="#FFB300"/>
+      <circle cx="-26" cy="-16" r="2.5" fill="#FF6B35"/>
+      <circle cx="0" cy="-2" r="3.5" fill="#F1FAF5" class="pu" filter="url(#glow)"/>
+      <circle cx="26" cy="12" r="2.5" fill="#00E676"/>
+      <circle cx="-26" cy="12" r="2.5" fill="#FFB300"/>
+      <circle cx="0" cy="26" r="2.5" fill="#FF6B35"/>
+    </g>
+
+    <rect x="12" y="172" width="88" height="16" rx="3" fill="#FFB300" fill-opacity=".12" stroke="#FFB300" stroke-width=".8" stroke-opacity=".4"/>
+    <text x="56" y="183" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="8.5" fill="#FFB300">● SYNTHESIS</text>
+
+    <text x="142" y="210" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Algorithmic Core</text>
+    <text x="142" y="228" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#7A9E8A">C++ · Data Structures</text>
+
+    <rect x="22" y="244" width="40" height="16" rx="3" fill="#00E676" fill-opacity=".15"/>
+    <text x="42" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#00E676">C++</text>
+    <rect x="68" y="244" width="40" height="16" rx="3" fill="#FFB300" fill-opacity=".15"/>
+    <text x="88" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FFB300">DSA</text>
+    <rect x="114" y="244" width="78" height="16" rx="3" fill="#FF6B35" fill-opacity=".15"/>
+    <text x="153" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FF6B35">Optimization</text>
+  </g>
+
+  <!-- === CARD 3 === (x:646) -->
+  <g transform="translate(646, 68)">
+    <rect width="284" height="296" rx="8" fill="url(#card-bg)" stroke="#FF6B35" stroke-width="1" stroke-opacity=".3"/>
+    <rect x="12" y="12" width="260" height="148" rx="5" fill="#040e09" stroke="#FF6B35" stroke-width=".8" stroke-opacity=".2"/>
+    <rect x="12" y="12" width="260" height="148" fill="url(#mesh)"/>
+    <line x1="12" y1="12" x2="272" y2="12" stroke="#FF6B35" stroke-width="1.5" stroke-opacity=".8" class="sc3"/>
+
+    <g transform="translate(142, 86)">
+      <circle cx="0" cy="0" r="52" fill="none" stroke="#FFB300" stroke-width=".8" stroke-opacity=".2" stroke-dasharray="4 10" class="sp"/>
+      <circle cx="0" cy="0" r="36" fill="none" stroke="#00E676" stroke-width="1.2" stroke-dasharray="6 6" class="sr"/>
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#FF6B35" stroke-width="1" stroke-dasharray="3 4" class="sp"/>
+      <polygon points="0,-12 10,0 0,12 -10,0"
+               fill="none" stroke="#FF6B35" stroke-width="1.5" class="pu" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="3.5" fill="#F1FAF5" filter="url(#glow)" class="pu"/>
+    </g>
+
+    <rect x="12" y="172" width="104" height="16" rx="3" fill="#FF6B35" fill-opacity=".12" stroke="#FF6B35" stroke-width=".8" stroke-opacity=".4"/>
+    <text x="64" y="183" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="8.5" fill="#FF6B35">● CONCEPTUAL</text>
+
+    <text x="142" y="210" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Agent Reasoning Graph</text>
+    <text x="142" y="228" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#7A9E8A">LLMs · Multi-Agent</text>
+
+    <rect x="22" y="244" width="68" height="16" rx="3" fill="#00E676" fill-opacity=".15"/>
+    <text x="56" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#00E676">Generative</text>
+    <rect x="96" y="244" width="40" height="16" rx="3" fill="#FFB300" fill-opacity=".15"/>
+    <text x="116" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FFB300">LLMs</text>
+    <rect x="142" y="244" width="68" height="16" rx="3" fill="#FF6B35" fill-opacity=".15"/>
+    <text x="176" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FF6B35">Reasoning</text>
+  </g>
+
+  <!-- GitHub link bar -->
+  <a href="https://github.com/Prabhakar289692" target="_blank">
+    <rect x="30" y="376" width="900" height="36" rx="6" fill="#0d2318" stroke="#00E676" stroke-width="1" stroke-opacity=".4"/>
+    <g transform="translate(380, 385)">
+      <path d="M 9 0 C 4 0 0 4 0 9 C 0 13 2.6 16.5 6.2 17.7 C 6.6 17.8 6.8 17.5 6.8 17.3 L 6.8 15.6 C 4.3 16.1 3.8 14.8 3.8 14.8 C 3.4 13.7 2.8 13.4 2.8 13.4 C 2 12.8 2.9 12.8 2.9 12.8 C 3.8 12.9 4.3 13.8 4.3 13.8 C 5.1 15.2 6.5 14.8 7 14.6 C 7.1 14 7.4 13.5 7.7 13.2 C 5.7 13 3.6 12.2 3.6 8.7 C 3.6 7.7 4 6.9 4.6 6.2 C 4.5 6 4.2 5 4.7 3.7 C 4.7 3.7 5.5 3.4 7.4 4.7 C 8.2 4.5 9 4.4 9.8 4.4 C 10.6 4.4 11.4 4.5 12.2 4.7 C 14.1 3.4 14.9 3.7 14.9 3.7 C 15.4 5 15.1 6 15 6.2 C 15.6 6.9 16 7.7 16 8.7 C 16 12.2 13.9 13 11.9 13.2 C 12.3 13.5 12.7 14.2 12.7 15.3 L 12.7 17.3 C 12.7 17.5 12.9 17.8 13.3 17.7 C 16.9 16.5 19.5 13 19.5 9 C 19.5 4 15.5 0 9 0 Z" fill="#00E676"/>
+    </g>
+    <text x="480" y="400" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="12" font-weight="600" fill="#F1FAF5" letter-spacing="1">
+      View All Repositories on GitHub
+    </text>
+  </a>
+</svg>

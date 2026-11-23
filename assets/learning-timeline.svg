@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1c14"/>
+      <stop offset="100%" stop-color="#040E0A"/>
+    </radialGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d2318"/>
+      <stop offset="100%" stop-color="#07140e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes flow {
+      0%{stroke-dashoffset:300} 100%{stroke-dashoffset:0}
+    }
+    @keyframes pulse-active {
+      0%,100%{r:10px;opacity:.9} 50%{r:13px;opacity:1;filter:drop-shadow(0 0 8px #00E676)}
+    }
+    @keyframes spin-dash {
+      from{transform:rotate(0deg)} to{transform:rotate(360deg)}
+    }
+    .fl{stroke-dasharray:16 280;animation:flow 5s linear infinite;fill:none}
+    .pa{animation:pulse-active 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .sd{animation:spin-dash 18s linear infinite;transform-box:fill-box;transform-origin:center}
+  </style>
+
+  <rect width="960" height="340" fill="url(#bg)"/>
+  <rect x="10" y="10" width="940" height="320" rx="10" fill="none" stroke="#00E676" stroke-width=".8" stroke-opacity=".2"/>
+  <path d="M10 42 L10 10 L42 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M950 42 L950 10 L918 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M10 298 L10 330 L42 330" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+  <path d="M950 298 L950 330 L918 330" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+
+  <text x="480" y="45" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+        font-size="11" font-weight="600" fill="#7A9E8A" letter-spacing="4">ROADMAP 2026 – 2030</text>
+  <line x1="340" y1="55" x2="620" y2="55" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+
+  <!-- Horizontal Axis -->
+  <line x1="80" y1="175" x2="880" y2="175" stroke="#FFB300" stroke-width="1" stroke-opacity=".25"/>
+  <line x1="80" y1="175" x2="880" y2="175" stroke="#00E676" stroke-width="2" class="fl" filter="url(#glow)"/>
+  <polygon points="884,175 876,171 876,179" fill="#FFB300"/>
+
+  <!-- NODE 1: 2026 — ACTIVE -->
+  <g transform="translate(130, 175)">
+    <line x1="0" y1="0" x2="0" y2="-110" stroke="#00E676" stroke-width="1" stroke-opacity=".5" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="13" fill="#040E0A" stroke="#00E676" stroke-width="2" filter="url(#glow)" class="pa"/>
+    <circle cx="0" cy="0" r="5" fill="#fff"/>
+
+    <g transform="translate(-75, -178)">
+      <rect width="150" height="62" rx="6" fill="url(#card-bg)" stroke="#00E676" stroke-width="1.2"/>
+      <rect x="0" y="0" width="150" height="62" rx="6" fill="#00E676" fill-opacity=".04"/>
+      <rect x="8" y="8" width="62" height="14" rx="3" fill="#00E676" fill-opacity=".15"/>
+      <text x="39" y="18" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" fill="#00E676">● CURRENT</text>
+      <text x="142" y="20" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#F1FAF5">2026</text>
+      <text x="8" y="38" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="700" fill="#F1FAF5">B.Tech Inception</text>
+      <text x="8" y="52" font-family="'Courier New', monospace" font-size="8.5" fill="#00E676">CSE (AI &amp; ML) · LPU</text>
+    </g>
+  </g>
+
+  <!-- NODE 2: 2027 — GOAL -->
+  <g transform="translate(290, 175)">
+    <line x1="0" y1="0" x2="0" y2="110" stroke="#FFB300" stroke-width="1" stroke-opacity=".5" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="12" fill="#040E0A" stroke="#FFB300" stroke-width="1.5" stroke-dasharray="4 4" class="sd"/>
+    <circle cx="0" cy="0" r="4.5" fill="#FFB300" fill-opacity=".8"/>
+
+    <g transform="translate(-75, 116)">
+      <rect width="150" height="62" rx="6" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".5"/>
+      <rect x="8" y="8" width="54" height="14" rx="3" fill="#FFB300" fill-opacity=".12"/>
+      <text x="35" y="18" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" fill="#FFB300">○ GOAL</text>
+      <text x="142" y="20" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#7A9E8A">2027</text>
+      <text x="8" y="38" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="600" fill="#F1FAF5">Core Foundations</text>
+      <text x="8" y="52" font-family="'Courier New', monospace" font-size="8.5" fill="#FFB300">DSA &amp; C++ Mastery</text>
+    </g>
+  </g>
+
+  <!-- NODE 3: 2028 — GOAL -->
+  <g transform="translate(450, 175)">
+    <line x1="0" y1="0" x2="0" y2="-110" stroke="#00E676" stroke-width="1" stroke-opacity=".4" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="12" fill="#040E0A" stroke="#00E676" stroke-width="1.5" stroke-dasharray="4 4" class="sd"/>
+    <circle cx="0" cy="0" r="4.5" fill="#00E676" fill-opacity=".8"/>
+
+    <g transform="translate(-75, -178)">
+      <rect width="150" height="62" rx="6" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".4"/>
+      <rect x="8" y="8" width="54" height="14" rx="3" fill="#00E676" fill-opacity=".1"/>
+      <text x="35" y="18" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" fill="#00E676">○ GOAL</text>
+      <text x="142" y="20" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#7A9E8A">2028</text>
+      <text x="8" y="38" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="600" fill="#F1FAF5">Advanced AI / ML</text>
+      <text x="8" y="52" font-family="'Courier New', monospace" font-size="8.5" fill="#00E676">Deep Model Research</text>
+    </g>
+  </g>
+
+  <!-- NODE 4: 2029 — GOAL -->
+  <g transform="translate(610, 175)">
+    <line x1="0" y1="0" x2="0" y2="110" stroke="#FF6B35" stroke-width="1" stroke-opacity=".4" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="12" fill="#040E0A" stroke="#FF6B35" stroke-width="1.5" stroke-dasharray="4 4" class="sd"/>
+    <circle cx="0" cy="0" r="4.5" fill="#FF6B35" fill-opacity=".8"/>
+
+    <g transform="translate(-75, 116)">
+      <rect width="150" height="62" rx="6" fill="url(#card-bg)" stroke="#FF6B35" stroke-width="1" stroke-opacity=".4"/>
+      <rect x="8" y="8" width="54" height="14" rx="3" fill="#FF6B35" fill-opacity=".1"/>
+      <text x="35" y="18" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" fill="#FF6B35">○ GOAL</text>
+      <text x="142" y="20" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#7A9E8A">2029</text>
+      <text x="8" y="38" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="600" fill="#F1FAF5">Internship</text>
+      <text x="8" y="52" font-family="'Courier New', monospace" font-size="8.5" fill="#FF6B35">Industry AI Systems</text>
+    </g>
+  </g>
+
+  <!-- NODE 5: 2030 — GOAL -->
+  <g transform="translate(770, 175)">
+    <line x1="0" y1="0" x2="0" y2="-110" stroke="#FFB300" stroke-width="1" stroke-opacity=".4" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="12" fill="#040E0A" stroke="#FFB300" stroke-width="1.5" stroke-dasharray="4 4" class="sd"/>
+    <circle cx="0" cy="0" r="4.5" fill="#FFB300" fill-opacity=".8"/>
+
+    <g transform="translate(-75, -178)">
+      <rect width="150" height="62" rx="6" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".4"/>
+      <rect x="8" y="8" width="54" height="14" rx="3" fill="#FFB300" fill-opacity=".1"/>
+      <text x="35" y="18" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" fill="#FFB300">○ GOAL</text>
+      <text x="142" y="20" text-anchor="end" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#7A9E8A">2030</text>
+      <text x="8" y="38" font-family="'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="600" fill="#F1FAF5">Graduation</text>
+      <text x="8" y="52" font-family="'Courier New', monospace" font-size="8.5" fill="#FFB300">AI/ML Engineer</text>
+    </g>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 302)" font-family="'Courier New', monospace" font-size="9" fill="#7A9E8A">
+    <circle cx="6" cy="4" r="4" fill="#00E676" fill-opacity=".9"/>
+    <text x="16" y="8" fill="#00E676">Active Phase</text>
+    <circle cx="110" cy="4" r="4" fill="none" stroke="#FFB300" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <text x="120" y="8" fill="#FFB300">Future Goal</text>
+  </g>
+</svg>

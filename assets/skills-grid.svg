@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1c14"/>
+      <stop offset="100%" stop-color="#040E0A"/>
+    </radialGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d2318"/>
+      <stop offset="100%" stop-color="#07140e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes spin-r { from{transform:rotate(360deg)} to{transform:rotate(0deg)} }
+    @keyframes pulse {
+      0%,100%{opacity:.6} 50%{opacity:1;filter:drop-shadow(0 0 6px currentColor)}
+    }
+    @keyframes float-up {
+      0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)}
+    }
+    .sp{animation:spin 20s linear infinite;transform-box:fill-box;transform-origin:center}
+    .sr{animation:spin-r 15s linear infinite;transform-box:fill-box;transform-origin:center}
+    .pu{animation:pulse 2.5s ease-in-out infinite}
+    .fl{animation:float-up 3.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .fl2{animation:float-up 3.5s ease-in-out infinite .6s;transform-box:fill-box;transform-origin:center}
+    .fl3{animation:float-up 3.5s ease-in-out infinite 1.2s;transform-box:fill-box;transform-origin:center}
+    .fl4{animation:float-up 3.5s ease-in-out infinite 1.8s;transform-box:fill-box;transform-origin:center}
+    .fl5{animation:float-up 3.5s ease-in-out infinite 2.4s;transform-box:fill-box;transform-origin:center}
+    .fl6{animation:float-up 3.5s ease-in-out infinite 3s;transform-box:fill-box;transform-origin:center}
+    .fl7{animation:float-up 3.5s ease-in-out infinite .3s;transform-box:fill-box;transform-origin:center}
+    .fl8{animation:float-up 3.5s ease-in-out infinite .9s;transform-box:fill-box;transform-origin:center}
+  </style>
+
+  <rect width="960" height="500" fill="url(#bg)"/>
+  <rect x="10" y="10" width="940" height="480" rx="10" fill="none" stroke="#00E676" stroke-width=".8" stroke-opacity=".2"/>
+  <path d="M10 42 L10 10 L42 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M950 42 L950 10 L918 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M10 458 L10 490 L42 490" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+  <path d="M950 458 L950 490 L918 490" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+
+  <text x="480" y="45" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+        font-size="11" font-weight="600" fill="#7A9E8A" letter-spacing="4">TECHNICAL SKILLS</text>
+  <line x1="360" y1="55" x2="600" y2="55" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+
+  <!-- 1. PYTHON -->
+  <g class="fl" transform="translate(32, 70)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#00E676" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sp"/>
+      <path d="M -4 -26 C -20 -26 -26 -16 -26 -6 L -26 2 L -12 2 L -12 -2 C -12 -10 -6 -14 2 -14 L 16 -14 C 22 -14 26 -18 26 -24 C 26 -26 22 -28 14 -28 Z"
+            fill="none" stroke="#00E676" stroke-width="1.8" filter="url(#glow)"/>
+      <circle cx="-16" cy="-20" r="2.5" fill="#00E676" class="pu"/>
+      <path d="M 4 26 C 20 26 26 16 26 6 L 26 -2 L 12 -2 L 12 2 C 12 10 6 14 -2 14 L -16 14 C -22 14 -26 18 -26 24 C -26 26 -22 28 -14 28 Z"
+            fill="none" stroke="#FFB300" stroke-width="1.8" filter="url(#glow)"/>
+      <circle cx="16" cy="20" r="2.5" fill="#FFB300" class="pu"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Python</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#00E676" letter-spacing="1">AI · DATA · SCRIPTING</text>
+  </g>
+
+  <!-- 2. C++ -->
+  <g class="fl2" transform="translate(256, 70)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".35"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#FFB300" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sp"/>
+      <path d="M 6 -18 C -14 -18 -20 -8 -20 0 C -20 8 -14 18 6 18"
+            fill="none" stroke="#00E676" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)"/>
+      <line x1="12" y1="-5" x2="12" y2="5" stroke="#FFB300" stroke-width="2" stroke-linecap="round"/>
+      <line x1="7" y1="0" x2="17" y2="0" stroke="#FFB300" stroke-width="2" stroke-linecap="round"/>
+      <line x1="24" y1="-5" x2="24" y2="5" stroke="#FFB300" stroke-width="2" stroke-linecap="round"/>
+      <line x1="19" y1="0" x2="29" y2="0" stroke="#FFB300" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">C++</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#FFB300" letter-spacing="1">HIGH-PERFORMANCE</text>
+  </g>
+
+  <!-- 3. MACHINE LEARNING -->
+  <g class="fl3" transform="translate(480, 70)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#00E676" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sr"/>
+      <line x1="-28" y1="22" x2="28" y2="-22" stroke="#FFB300" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <circle cx="-14" cy="-14" r="5" fill="#00E676" class="pu" filter="url(#glow)"/>
+      <circle cx="-24" cy="-4" r="3" fill="#00E676" fill-opacity=".6"/>
+      <circle cx="-6" cy="-22" r="3" fill="#00E676" fill-opacity=".6"/>
+      <line x1="-14" y1="-14" x2="-24" y2="-4" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+      <line x1="-14" y1="-14" x2="-6" y2="-22" stroke="#00E676" stroke-width=".8" stroke-opacity=".4"/>
+      <circle cx="14" cy="14" r="5" fill="#FF6B35" class="pu" filter="url(#glow)"/>
+      <circle cx="24" cy="4" r="3" fill="#FF6B35" fill-opacity=".6"/>
+      <circle cx="6" cy="22" r="3" fill="#FF6B35" fill-opacity=".6"/>
+      <line x1="14" y1="14" x2="24" y2="4" stroke="#FF6B35" stroke-width=".8" stroke-opacity=".4"/>
+      <line x1="14" y1="14" x2="6" y2="22" stroke="#FF6B35" stroke-width=".8" stroke-opacity=".4"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Machine Learning</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#00E676" letter-spacing="1">STATISTICAL MODELS</text>
+  </g>
+
+  <!-- 4. DEEP LEARNING -->
+  <g class="fl4" transform="translate(704, 70)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#FF6B35" stroke-width="1" stroke-opacity=".35"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#FF6B35" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sp"/>
+      <circle cx="-22" cy="-12" r="4" fill="#FFB300"/>
+      <circle cx="-22" cy="12" r="4" fill="#FFB300"/>
+      <circle cx="0" cy="-18" r="5" fill="#00E676" filter="url(#glow)" class="pu"/>
+      <circle cx="0" cy="0" r="6" fill="#F1FAF5" filter="url(#glow)" class="pu"/>
+      <circle cx="0" cy="18" r="5" fill="#00E676" filter="url(#glow)" class="pu"/>
+      <circle cx="22" cy="-8" r="5" fill="#FF6B35" filter="url(#glow)"/>
+      <circle cx="22" cy="8" r="5" fill="#FF6B35" filter="url(#glow)"/>
+      <g stroke="#FFB300" stroke-width=".8" stroke-opacity=".4" fill="none">
+        <line x1="-22" y1="-12" x2="0" y2="-18"/>
+        <line x1="-22" y1="-12" x2="0" y2="0"/>
+        <line x1="-22" y1="12" x2="0" y2="0"/>
+        <line x1="-22" y1="12" x2="0" y2="18"/>
+        <line x1="0" y1="-18" x2="22" y2="-8"/>
+        <line x1="0" y1="0" x2="22" y2="-8"/>
+        <line x1="0" y1="0" x2="22" y2="8"/>
+        <line x1="0" y1="18" x2="22" y2="8"/>
+      </g>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Deep Learning</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#FF6B35" letter-spacing="1">NEURAL NETWORKS</text>
+  </g>
+
+  <!-- 5. GENERATIVE AI -->
+  <g class="fl5" transform="translate(32, 278)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".35"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#FFB300" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sr"/>
+      <path d="M 0 -28 Q 0 0 28 0 Q 0 0 0 28 Q 0 0 -28 0 Q 0 0 0 -28 Z"
+            fill="none" stroke="#FFB300" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z"
+            fill="none" stroke="#00E676" stroke-width="1.5" class="pu"/>
+      <circle cx="0" cy="0" r="3.5" fill="#F1FAF5" class="pu" filter="url(#glow)"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Generative AI</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#FFB300" letter-spacing="1">LLMs · DIFFUSION</text>
+  </g>
+
+  <!-- 6. GIT -->
+  <g class="fl6" transform="translate(256, 278)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#00E676" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sp"/>
+      <line x1="-12" y1="-24" x2="-12" y2="24" stroke="#00E676" stroke-width="2"/>
+      <path d="M -12 8 C -12 -4 14 4 14 -8 L 14 -24" fill="none" stroke="#FF6B35" stroke-width="2"/>
+      <circle cx="-12" cy="-20" r="5" fill="#0a1c14" stroke="#00E676" stroke-width="1.8"/>
+      <circle cx="-12" cy="-20" r="2" fill="#00E676" class="pu"/>
+      <circle cx="-12" cy="16" r="5" fill="#0a1c14" stroke="#00E676" stroke-width="1.8"/>
+      <circle cx="-12" cy="16" r="2" fill="#00E676"/>
+      <circle cx="14" cy="-20" r="5" fill="#0a1c14" stroke="#FF6B35" stroke-width="1.8" filter="url(#glow)"/>
+      <circle cx="14" cy="-20" r="2" fill="#FF6B35" class="pu"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">Git</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#00E676" letter-spacing="1">VERSION CONTROL</text>
+  </g>
+
+  <!-- 7. GITHUB -->
+  <g class="fl7" transform="translate(480, 278)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".35"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#FFB300" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sp"/>
+      <path d="M 0 -22 C -13 -22 -23 -12 -23 1 C -23 11 -16 19 -7 22 C -5.8 22.2 -6.2 21.6 -6.2 21 L -6.2 17.8 C -12.4 19.1 -13.8 15.8 -13.8 15.8 C -14.8 13.5 -16.5 12.8 -16.5 12.8 C -18.7 11.3 -16.3 11.3 -16.3 11.3 C -13.8 11.5 -12.6 13.9 -12.6 13.9 C -10.5 17.5 -7 16.5 -5.8 15.9 C -5.6 14.4 -5 13.3 -4.2 12.6 C -9.2 12 -14.4 10.1 -14.4 1.3 C -14.4 -1.2 -13.5 -3.3 -12 -4.9 C -12.2 -5.5 -13 -7.9 -11.7 -11.2 C -11.7 -11.2 -9.8 -11.8 -5.4 -8.9 C -3.6 -9.4 -1.8 -9.7 0 -9.7 C 1.8 -9.7 3.6 -9.4 5.4 -8.9 C 9.8 -11.8 11.7 -11.2 11.7 -11.2 C 13 -7.9 12.2 -5.5 12 -4.9 C 13.5 -3.3 14.4 -1.2 14.4 1.3 C 14.4 10.1 9.2 12 4.2 12.6 C 5.1 13.4 5.9 14.9 5.9 17.2 L 5.9 21 C 5.9 21.6 5.5 22.2 6.7 22 C 16 19 23 11 23 1 C 23 -12 13 -22 0 -22 Z"
+            fill="#F1FAF5" fill-opacity=".85" filter="url(#glow)"/>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">GitHub</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#FFB300" letter-spacing="1">CODE &amp; OPEN SOURCE</text>
+  </g>
+
+  <!-- 8. DSA -->
+  <g class="fl8" transform="translate(704, 278)">
+    <rect width="200" height="190" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+    <g transform="translate(100, 82)">
+      <circle cx="0" cy="0" r="38" fill="none" stroke="#00E676" stroke-width=".7" stroke-opacity=".2" stroke-dasharray="3 8" class="sr"/>
+      <circle cx="0" cy="-22" r="6" fill="#0a1c14" stroke="#00E676" stroke-width="1.8" filter="url(#glow)"/>
+      <circle cx="0" cy="-22" r="2.5" fill="#F1FAF5" class="pu"/>
+      <circle cx="-18" cy="0" r="5" fill="#0a1c14" stroke="#FFB300" stroke-width="1.5"/>
+      <circle cx="-18" cy="0" r="2" fill="#FFB300"/>
+      <circle cx="18" cy="0" r="5" fill="#0a1c14" stroke="#FFB300" stroke-width="1.5"/>
+      <circle cx="18" cy="0" r="2" fill="#FFB300"/>
+      <circle cx="-28" cy="22" r="4" fill="#FF6B35"/>
+      <circle cx="-8" cy="22" r="4" fill="#FF6B35"/>
+      <circle cx="8" cy="22" r="4" fill="#00E676"/>
+      <circle cx="28" cy="22" r="4" fill="#00E676"/>
+      <g stroke="#FFB300" stroke-width="1" stroke-opacity=".5" fill="none">
+        <line x1="0" y1="-22" x2="-18" y2="0"/>
+        <line x1="0" y1="-22" x2="18" y2="0"/>
+        <line x1="-18" y1="0" x2="-28" y2="22"/>
+        <line x1="-18" y1="0" x2="-8" y2="22"/>
+        <line x1="18" y1="0" x2="8" y2="22"/>
+        <line x1="18" y1="0" x2="28" y2="22"/>
+      </g>
+    </g>
+    <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif"
+          font-size="14" font-weight="700" fill="#F1FAF5">DSA</text>
+    <text x="100" y="167" text-anchor="middle" font-family="'Courier New', monospace"
+          font-size="9" fill="#00E676" letter-spacing="1">TREES · GRAPHS · ALGO</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1c14"/>
+      <stop offset="100%" stop-color="#040E0A"/>
+    </radialGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d2318"/>
+      <stop offset="100%" stop-color="#07140e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+    .sp{animation:spin 20s linear infinite;transform-box:fill-box;transform-origin:center}
+    .pu{animation:pulse 2.5s ease-in-out infinite}
+  </style>
+
+  <rect width="960" height="180" fill="url(#bg)"/>
+  <rect x="10" y="10" width="940" height="160" rx="10" fill="none" stroke="#00E676" stroke-width=".8" stroke-opacity=".2"/>
+  <path d="M10 42 L10 10 L42 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M950 42 L950 10 L918 10" fill="none" stroke="#00E676" stroke-width="1.5"/>
+  <path d="M10 138 L10 170 L42 170" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+  <path d="M950 138 L950 170 L918 170" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+
+  <!-- === GITHUB === -->
+  <a href="https://github.com/Prabhakar289692" target="_blank">
+    <g transform="translate(30, 25)">
+      <rect width="270" height="130" rx="8" fill="url(#card-bg)" stroke="#00E676" stroke-width="1" stroke-opacity=".3"/>
+      <g transform="translate(50, 65)">
+        <circle cx="0" cy="0" r="28" fill="none" stroke="#00E676" stroke-width=".6" stroke-opacity=".2" stroke-dasharray="3 7" class="sp"/>
+        <path d="M 0 -17 C -10 -17 -17 -9 -17 1 C -17 8 -12 14 -5 17 C -4.4 17.2 -4.6 16.8 -4.6 16.5 L -4.6 13.5 C -9.4 14.5 -10.4 12.2 -10.4 12.2 C -11.1 10.6 -12.4 10.2 -12.4 10.2 C -14 9.2 -12.4 9.2 -12.4 9.2 C -10.4 9.3 -9.5 10.8 -9.5 10.8 C -7.9 13.4 -5.4 12.6 -4.4 12.2 C -4.2 11.1 -3.8 10.3 -3.1 9.8 C -7.1 9.4 -11.1 7.9 -11.1 1.2 C -11.1 -0.8 -10.4 -2.4 -9.1 -3.6 C -9.3 -4 -9.9 -5.8 -8.8 -8.3 C -8.8 -8.3 -7.3 -8.8 -4 -6.6 C -2.7 -7 -1.3 -7.2 0 -7.2 C 1.3 -7.2 2.7 -7 4 -6.6 C 7.3 -8.8 8.8 -8.3 8.8 -8.3 C 9.9 -5.8 9.3 -4 9.1 -3.6 C 10.4 -2.4 11.1 -0.8 11.1 1.2 C 11.1 7.9 7.1 9.4 3.1 9.8 C 3.9 10.5 4.6 11.7 4.6 13.5 L 4.6 16.5 C 4.6 16.8 4.4 17.2 5 17 C 12 14 17 8 17 1 C 17 -9 10 -17 0 -17 Z"
+              fill="#F1FAF5" fill-opacity=".9" filter="url(#glow)"/>
+      </g>
+      <text x="156" y="58" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="14" font-weight="700" fill="#F1FAF5">GitHub</text>
+      <text x="156" y="74" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#00E676">@Prabhakar289692</text>
+      <rect x="80" y="90" width="152" height="28" rx="5" fill="#00E676" fill-opacity=".12" stroke="#00E676" stroke-width="1"/>
+      <text x="156" y="108" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="11" font-weight="600" fill="#F1FAF5">Follow →</text>
+    </g>
+  </a>
+
+  <!-- === LINKEDIN === -->
+  <a href="https://www.linkedin.com/in/prabhakar-mishra-2a1a65395/" target="_blank">
+    <g transform="translate(345, 25)">
+      <rect width="270" height="130" rx="8" fill="url(#card-bg)" stroke="#FFB300" stroke-width="1" stroke-opacity=".3"/>
+      <g transform="translate(50, 65)">
+        <circle cx="0" cy="0" r="28" fill="none" stroke="#FFB300" stroke-width=".6" stroke-opacity=".2" stroke-dasharray="3 7" class="sp"/>
+        <rect x="-16" y="-16" width="32" height="32" rx="6" fill="none" stroke="#FFB300" stroke-width="1.6" filter="url(#glow)"/>
+        <circle cx="-6" cy="-5" r="2.2" fill="#00E676" class="pu"/>
+        <line x1="-6" y1="-1" x2="-6" y2="10" stroke="#00E676" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M 1 10 L 1 3.5 C 1 1.5 3.5 1 6 1 C 8.5 1 8.5 2.5 8.5 4.5 L 8.5 10"
+              fill="none" stroke="#F1FAF5" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <text x="156" y="58" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="14" font-weight="700" fill="#F1FAF5">LinkedIn</text>
+      <text x="156" y="74" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#FFB300">prabhakar-mishra</text>
+      <rect x="80" y="90" width="152" height="28" rx="5" fill="#FFB300" fill-opacity=".12" stroke="#FFB300" stroke-width="1"/>
+      <text x="156" y="108" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="11" font-weight="600" fill="#F1FAF5">Connect →</text>
+    </g>
+  </a>
+
+  <!-- === EMAIL === -->
+  <a href="mailto:pkm95720@gmail.com">
+    <g transform="translate(660, 25)">
+      <rect width="270" height="130" rx="8" fill="url(#card-bg)" stroke="#FF6B35" stroke-width="1" stroke-opacity=".3"/>
+      <g transform="translate(50, 65)">
+        <circle cx="0" cy="0" r="28" fill="none" stroke="#FF6B35" stroke-width=".6" stroke-opacity=".2" stroke-dasharray="3 7" class="sp"/>
+        <rect x="-18" y="-12" width="36" height="24" rx="3" fill="none" stroke="#00E676" stroke-width="1.6" filter="url(#glow)"/>
+        <path d="M -18 -10 L 0 4 L 18 -10" fill="none" stroke="#FFB300" stroke-width="1.5"/>
+        <circle cx="0" cy="4" r="2" fill="#F1FAF5" class="pu"/>
+      </g>
+      <text x="156" y="58" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="14" font-weight="700" fill="#F1FAF5">Email</text>
+      <text x="156" y="74" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#00E676">pkm95720@gmail.com</text>
+      <rect x="80" y="90" width="152" height="28" rx="5" fill="#FF6B35" fill-opacity=".12" stroke="#FF6B35" stroke-width="1"/>
+      <text x="156" y="108" text-anchor="middle" font-family="'Segoe UI', Inter, sans-serif" font-size="11" font-weight="600" fill="#F1FAF5">Send Email →</text>
+    </g>
+  </a>
+</svg>
